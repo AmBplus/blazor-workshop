@@ -1,14 +1,14 @@
-# Components and layout
+# کامپوننت ها (Components) و لایوت (layout)  
 
-In this session, you'll get started building a pizza store app using Blazor. The app will enable users to order pizzas, customize them, and then track the order deliveries.
+در این بخش ، ما شروع میکنیم به ساختن یک برنامه فروش پیتزا با استفاده از بلیزور . این برنامه به کاربران اجازه میده که بتونن پیتزا سفارش بدن ، اون رو سفارشی کنن و بعد سفارششون رو رهگیری کنن .
+## نقطه شروع پیتزا فروشی  
 
-## Pizza store starting point
+ما یک سولوشن(solution) ابتدایی برنامه پیتزا فروشی برای شما در این ریپوزیتوری(repo) آماده کردیم . برید و این ریپوزیتوری رو کلون(clone) کنید روی دستگاه خودتون .بعد میتونید وارد بخش شروع ([starting point](https://github.com/dotnet-presentations/blazor-workshop/tree/master/save-points/00-get-started)) بشید ، در این فولدر شما میتونید با توجه هر بخش که مطالعه میکنید کد های همون بخش رو ببینید که به اصطلاح برای شما (*save-points*) صورت گرفته .
+> نکته : اگر شما کد های این ورکشاپ رو به جای دیگه دستگاهتون (سیستمتون) انتقال میدید ، مطمئن بشید که کپی می کنین فایل *Directory.Build.props* در روت(root) این ریپوزیتوری ، برای بازگردانی ورژن درست پکیج ها .
+ 
 
-We've set up the initial solution for you for the pizza store app in this repo. Go ahead and clone this repo to your machine. You'll find the [starting point](https://github.com/dotnet-presentations/blazor-workshop/tree/master/save-points/00-get-started) in the *save-points* folder along with the end state for each session.
 
-> Note: If you copy the code from this workshop to a different location on your machine, be sure to also copy the *Directory.Build.props* file at the root of this repo in order to restore the appropriate package versions.
-
-The solution already contains four projects:
+این سولوشن در حال حاظر شامل چهار پروژه میشه : 
 
 ![image](https://user-images.githubusercontent.com/1874516/77238114-e2072780-6b8a-11ea-8e44-de6d7910183e.png)
 
