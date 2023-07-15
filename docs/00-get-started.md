@@ -1,8 +1,8 @@
-# Get started
+# خب شروع کنیم
 
-In this session, you'll setup your machine for Blazor development and build your first Blazor app.
 
-## Setup
+تو این بخش ما یاد میگیریم که محیط توسعه بلیزور رو برای دستگاه شما آماده کنیم و اولین برنامه بلیزور شمارو بسازیم .
+## نصب
 
 To get started with Blazor, follow the instructions on https://aka.ms/blazor-getting-started.
 
