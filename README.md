@@ -10,20 +10,19 @@
 
 ## شروع کنیم
 
-Go ahead and clone this repo to your machine, then dive in and [get started](/docs/00-get-started.md)!
+میتونید برید و این ریپوزیتوری رو روی سیستم خودتون کلون کنید ، بعد وارد بخش [get started](/docs/00-get-started.md) بشید .
+## بخش ها
 
-## Sessions
-
-| Session | Topics |
+| بخش ها | موضوعات |
 | ----- | ---- |
-| [Session #0](/docs/00-get-started.md) | Get bits installed and build your first Blazor app |
-| [Session #1](/docs/01-components-and-layout.md) | Get started with components, create the app layout |
-| [Session #2](/docs/02-customize-a-pizza.md) | Add customized pizzas to orders  |
-| [Session #3](/docs/03-show-order-status.md) | Show order status |
-| [Session #4](/docs/04-refactor-state-management.md) | Refactor state management |
-| [Session #5](/docs/05-checkout-with-validation.md) | Checkout with validation |
-| [Session #6](/docs/06-authentication-and-authorization.md) | Authenticate users and authorize access to order status |
-| [Session #7](/docs/07-javascript-interop.md) | Track order status on a real time map |
-| [Session #8](/docs/08-templated-components.md) | Create and use components with template parameters |
-| [Session #9](/docs/09-progressive-web-app.md) | Progressive Web App (PWA) features |
-| [Session #10](/docs/10-publish-and-deploy.md) | Deploy your app to Azure |
+| [بخش شماره #0](/docs/00-get-started.md) | بریم بلیزور رو نصب کنیم و اولین برنامه شمارو بسازیم |
+| [بخش شماره #1](/docs/01-components-and-layout.md) | شروع کار با کامپوننت ها ، ساختن لایوت برنامه |
+| [بخش شماره #2](/docs/02-customize-a-pizza.md) | اضافه کردن پیتزا های سفارشی برای سفارش دادن |
+| [بخش شماره #3](/docs/03-show-order-status.md) | نشان دادن وضعیت سفارش |
+| [بخش شماره #4](/docs/04-refactor-state-management.md) | ریفکتور کردن(Refactor) مدیریت وضعیت |
+| [بخش شماره #5](/docs/05-checkout-with-validation.md) | بررسی با ولیدیشن |
+| [بخش شماره #6](/docs/06-authentication-and-authorization.md) | احراز هویت کاربر و بررسی سطح دسترسی برای دسترسی به وضعیت سفارش |
+| [بخش شماره #7](/docs/07-javascript-interop.md) | اضافه کردن قابلیت دنبال کردن وضعیت سفارش و نشان دادن اون در یک نقشه به صورت آنی |
+| [بخش شماره #8](/docs/08-templated-components.md) | ساختن و استفاده از کامپوننت ها با پارامتر های قالب |
+| [بخش شماره #9](/docs/09-progressive-web-app.md) | ویژگی های اپ های وب پیش رونده (Pwa)|
+| [بخش شماره #10](/docs/10-publish-and-deploy.md) | انتشار برنامه شما در Azure |
