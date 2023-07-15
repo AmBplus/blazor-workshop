@@ -3,11 +3,11 @@
 
 تو این بخش ما یاد میگیریم که محیط توسعه بلیزور رو برای دستگاه شما آماده کنیم و اولین برنامه بلیزور شمارو بسازیم .
 ## نصب
+برای شروع کار با بلیزور میتونید دستورات که در لینکی در ادامه میاد رو دنبال کنید : https://aka.ms/blazor-getting-started.
 
-To get started with Blazor, follow the instructions on https://aka.ms/blazor-getting-started.
 
 ## Build your first app
 
-Once you have your first Blazor app running, try [building your first Blazor app](https://docs.microsoft.com/aspnet/core/tutorials/build-your-first-blazor-app).
+Once you have your first Blazor app running, try [building your first Blazor app](https://docs.microsoft.com/aspnet/core/tutorials/build-your-first-blazor-app)
 
-Next up - [Components and layout](01-components-and-layout.md)
+بعد از اون میتونید وارد بخش اول یعنی کامپوننت و لایوت بشید . - [Components and layout](01-components-and-layout.md)
