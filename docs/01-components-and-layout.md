@@ -13,26 +13,27 @@
 ![image](https://user-images.githubusercontent.com/1874516/77238114-e2072780-6b8a-11ea-8e44-de6d7910183e.png)
 
 
-- **BlazingPizza.Client**: This is the Blazor project. It contains the UI components for the app.
-- **BlazingPizza.Server**: This is the ASP.NET Core project hosting the Blazor app and also the backend services for the app.
-- **BlazingPizza.Shared**: This project contains the shared model types for the app.
-- **BlazingPizza.ComponentsLibrary**: This is a library of components and helper code to be used by the app in later sessions.
+- **بلیزینگ پیترا کلاینت(BlazingPizza.Client)**: یک پروژه بلیزور هست . شامل کامپوننت های ui برای برنامه
+- **بلیزینگ پیتزا سرور(BlazingPizza.Server)**: این یک پروژه asp.net core برای هاست کردن برنامه بلیزور و همچنین بک اند سرویس های برنامه .
+- **بلیزینگ پیتزا مشترک(BlazingPizza.Shared)**: این پروژه شامل مدل های به اشتراک گذاشته شده برای برنامس.
+- **بلیزینگ پیتزا کتابخانه کامپوننت ها (BlazingPizza.ComponentsLibrary)**: این کتابخانه شامل کامپوننت ها و کد های کمک کننده برای استفاده در بخش های بعدیست.
 
-The **BlazingPizza.Server** project should be set as the startup project.
+ **بلیزینگ پیتزا سرور (BlazingPizza.Server)** : این پروژه باید به عنوان یک پروژه شروع ست(قرار بگیره) بشه
 
-When you run the app, you'll see that it currently only contains a simple home page.
+
+وقتی که برنامه را اجرا کردید ، شما میتونید ببینید که در حال حاظر فقط شامل یک صفحه اصلی(Home Page) سادست .
 
 ![image](https://user-images.githubusercontent.com/1874516/77238160-25fa2c80-6b8b-11ea-8145-e163a9f743fe.png)
 
-Open *Pages/Index.razor* in the **BlazingPizza.Client** project to see the code for the home page.
+آدرس رو به رو رو باز کنید *Pages/Index.razor* در بخش **BlazingPizza.Client** شما میتونید کد های صفحه اصلی رو ببینید.
 
 ```
 @page "/"
 
 <h1>Blazing Pizzas</h1>
 ```
+این صفحه اصلی به عنوان یک کامپوننت تک قرار گرفته . دستور `page@` مشخص میکنه که `Index` کامپوننت یک صفحه صفحه قابل ردیابی با مسیر مشخصه .
 
-The home page is implemented as a single component. The `@page` directive specifies that the `Index` component is a routable page with the specified route.
 
 ## Display the list of pizza specials
 
