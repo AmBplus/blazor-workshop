@@ -56,7 +56,7 @@
 ```
 
 دستورالعمل 'inject@' اساساً یک ویژگی جدید را بر روی کامپوننت(مؤلفه) تعریف می کند که در آن توکن اول نوع پروپرتی(property) را مشخص می کند و توکن دوم نام پروپرتی را مشخص می کند. پروپرتی با استفاده از تزریق وابستگی از قبل برای شما پر شده است.
-Override the `OnInitializedAsync` method in the `@code` block to retrieve the list of pizza specials. This method is part of the component lifecycle and is called when the component is initialized. Use the `GetFromJsonAsync<T>()` method to handle deserializing the response JSON:
+
 برای بازیابی لیست پیتزاهای ویژه، متد(method) `OnInitializedAsync` را در بلوک `@code` اورراید(overide) کنید. این روش بخشی از چرخه حیات کامپوننت است و زمانی فراخوانی می شود که کامپوننت مقدار دهی اولیه شود. از متد `()<GetFromJsonAsync<T>` برای مدیریت دسریالایز(deserializing) پاسخ JSON استفاده کنید:
 ```csharp
 @code {
