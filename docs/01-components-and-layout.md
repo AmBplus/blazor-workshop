@@ -4,7 +4,7 @@
 ## نقطه شروع پیتزا فروشی  
 
 ما یک سولوشن(solution) ابتدایی برنامه پیتزا فروشی برای شما در این ریپوزیتوری(repo) آماده کردیم . برید و این ریپوزیتوری رو روی دستگاه خودتون کلون(clone) کنید .بعد میتونید وارد بخش شروع ([starting point](https://github.com/dotnet-presentations/blazor-workshop/tree/master/save-points/00-get-started)) بشید ، در این فولدر شما میتونید با توجه هر بخش که مطالعه میکنید کد های همون بخش رو ببینید که به اصطلاح برای شما (*save-points*) صورت گرفته .
-> نکته : اگر شما کد های این ورکشاپ رو به جای دیگه دستگاهتون (سیستمتون) انتقال میدید ، مطمئن بشید که کپی می کنین فایل *Directory.Build.props* در روت(root) این ریپوزیتوری ، برای بازگردانی ورژن درست پکیج ها .
+> نکته : اگر شما کد های این ورکشاپ رو به جای دیگه دستگاهتون (سیستمتون) انتقال میدید ، مطمئن بشید که  فایل *Directory.Build.props* در روت(root) این ریپوزیتوری قرار داره رو کپی می کنین که برای بازگردانی ورژن درست پکیج ها صورت میگیره .
  
 
 
@@ -13,9 +13,9 @@
 ![image](https://user-images.githubusercontent.com/1874516/77238114-e2072780-6b8a-11ea-8e44-de6d7910183e.png)
 
 
-- **بلیزینگ پیترا کلاینت(BlazingPizza.Client)**: یک پروژه بلیزور هست . شامل کامپوننت های ui برای برنامه
-- **بلیزینگ پیتزا سرور(BlazingPizza.Server)**: این یک پروژه asp.net core برای هاست کردن برنامه بلیزور و همچنین بک اند سرویس های برنامه .
-- **بلیزینگ پیتزا مشترک(BlazingPizza.Shared)**: این پروژه شامل مدل های به اشتراک گذاشته شده برای برنامس.
+- **بلیزینگ پیترا کلاینت(BlazingPizza.Client)**: یک پروژه بلیزور شامل کامپوننت های ui برای برنامه هست . 
+- **بلیزینگ پیتزا سرور(BlazingPizza.Server)**: این یک پروژه asp.net core برای هاست کردن برنامه بلیزور و همچنین بک اند سرویس های برنامه هست.
+- **بلیزینگ پیتزا مشترک(BlazingPizza.Shared)**: این پروژه شامل مدل های به اشتراک گذاشته شده برای برنامست.
 - **بلیزینگ پیتزا کتابخانه کامپوننت ها (BlazingPizza.ComponentsLibrary)**: این کتابخانه شامل کامپوننت ها و کد های کمک کننده برای استفاده در بخش های بعدیست.
 
  **بلیزینگ پیتزا سرور (BlazingPizza.Server)** : این پروژه باید به عنوان یک پروژه شروع ست(قرار بگیره) بشه
@@ -35,31 +35,29 @@
 این صفحه اصلی به عنوان یک کامپوننت تک قرار گرفته . دستور `page@` مشخص میکنه که `Index` کامپوننت یک صفحه صفحه قابل ردیابی با مسیر مشخصه .
 
 
-## Display the list of pizza specials
 
-First we'll update the home page to display the list of available pizza specials. The list of specials will be part of the state of the `Index` component.
+## نشان دادن لیست پیتزا های ویژه
 
-Add a `@code` block to *Index.razor* with a list field to keep track of the available specials:
+ابتدا صفحه اصلی را به روز می کنیم تا لیستی از پیتزاهای ویژه موجود را نمایش بده . فهرست ویژه‌ ها بخشی از وضعیت کامپوننت `Index` خواهد بود.
 
+یک بلوک `code@` به *Index.razor* اضافه کنید به همراه یک فیلد نوع لیست پیتزاهای ویژه تا بتونید موارد ویژه موجود را پیگیری کنید:
 ```csharp
 @code {
     List<PizzaSpecial> specials;
 }
 ```
 
-The code in the `@code` block is added to the generated class for the component. The `PizzaSpecial` type is already defined for you in the **BlazingPizza.Shared** project.
+کد موجود در بلوک `@code` به کلاس تولید شده برای کامپوننت(مولفه) اضافه می شود. نوع `PizzaSpecial` قبلاً برای شما در پروژه **BlazingPizza.Shared** تعریف شده است.
 
-To get the available list of specials we need to call an API on the backend. Blazor provides a preconfigured `HttpClient` through dependency injection that is already setup with the correct base address. Use the `@inject` directive to inject an `HttpClient` into the `Index` component.
-
+برای دریافت لیست موجود از موارد ویژه، باید یک API در بک اند(backend) فراخوانی کنیم. Blazor یک `HttpClient` از پیش تنظیم شده را از طریق تزریق وابستگی ارائه می ده که از قبل با آدرس پایه درست تنظیم شده است. از دستورالعمل `inject@` برای تزریق `HttpClient` به کامپوننت(مؤلفه) `Index` استفاده کنید.
 ```
 @page "/"
 @inject HttpClient HttpClient
 ```
 
-The `@inject` directive essentially defines a new property on the component where the first token specifies the property type and the second token specifies the property name. The property is populated for you using dependency injection.
-
+دستورالعمل 'inject@' اساساً یک ویژگی جدید را بر روی کامپوننت(مؤلفه) تعریف می کند که در آن توکن اول نوع پروپرتی(property) را مشخص می کند و توکن دوم نام پروپرتی را مشخص می کند. پروپرتی با استفاده از تزریق وابستگی از قبل برای شما پر شده است.
 Override the `OnInitializedAsync` method in the `@code` block to retrieve the list of pizza specials. This method is part of the component lifecycle and is called when the component is initialized. Use the `GetFromJsonAsync<T>()` method to handle deserializing the response JSON:
-
+برای بازیابی لیست پیتزاهای ویژه، متد(method) `OnInitializedAsync` را در بلوک `@code` اورراید(overide) کنید. این روش بخشی از چرخه حیات کامپوننت است و زمانی فراخوانی می شود که کامپوننت مقدار دهی اولیه شود. از متد `()<GetFromJsonAsync<T>` برای مدیریت دسریالایز(deserializing) پاسخ JSON استفاده کنید:
 ```csharp
 @code {
     List<PizzaSpecial> specials;
@@ -71,13 +69,16 @@ Override the `OnInitializedAsync` method in the `@code` block to retrieve the li
 }
 ```
 
-The `/specials` API is defined by a minimal API at `PizzaApiExtensions.cs` in the **BlazingPizza.Server** project.
 
-See also [Create a minimal web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0) for additional details.
+آدرس "specials/" ای پی ای(API) های تعریف شده به صورت مینیمال ای پی ای(minimal API) است که در فایل `PizzaApiExtensions.cs` داخل پروژه **BlazingPizza.Server** قرار گرفته است .
 
-> Note: `BlazingPizza.OrderContext.Default.ListPizzaSpecial` refers to Json serialization with [source generators](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-source-generation).
+همچنین درمورد اطلاعات بیشتر درمورد مینیمال ای پی ای ها میتونید به آدرس [Create a minimal web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-6.0) مراجعه کنید .
 
+
+> توجه: `BlazingPizza.OrderContext.Default.ListPizzaSpecial` به سریال سازی(serialization) Json با [مولدهای منبع(source generators)] اشاره دارد که میتونید در لینک (https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-source-generation) مشاهده بفرمایید .
+ 
 Once the component is initialized it will render its markup. Replace the markup in the `Index` component with the following to list the pizza specials:
+
 
 ```html
 <div class="main">
