@@ -78,7 +78,7 @@
 > توجه: `BlazingPizza.OrderContext.Default.ListPizzaSpecial` به سریال سازی(serialization) Json با [مولدهای منبع(source generators)] اشاره دارد که میتونید در لینک (https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-source-generation) مشاهده بفرمایید .
  
 Once the component is initialized it will render its markup. Replace the markup in the `Index` component with the following to list the pizza specials:
-
+وقتی که کامپوننت ایجاد(initialized) میشه مارکاپ(نشانه گذاری)`markup` هارو رندر میکنه ، مارکاپ`markup` های داخل کامپوننت `Index` رو با cshtml های زیر جا به جا کنید .
 
 ```html
 <div class="main">
@@ -100,17 +100,17 @@ Once the component is initialized it will render its markup. Replace the markup 
 </div>
 ```
 
-Run the app by hitting `Ctrl-F5`. Now you should see a list of the specials that are available.
+اگر از ویژوال استدویو (Visual Studio) استفاده میکنین میتوانید با `Ctrl-F5` برنامه رو اجرا کنید ، در غیر این صورت با دستور `dotnet run` در کامند لاین رو اجرا کنید 
 
+الان میتونید لیست از پیتزا های وِیژه موجود رو ببینید :
 ![image](https://user-images.githubusercontent.com/1874516/77239386-6c558880-6b97-11ea-9a14-83933146ba68.png)
 
 
-## Create the layout
+## ایجاد و ساختن طرح یا لایوت(layout)
 
-Next we'll set up the layout for the app. 
+در قدم بعدی ما میخوایم طرح(لایوت) برنامه رو ایجاد کنیم .
 
-Layouts in Blazor are also components. They inherit from `LayoutComponentBase`, which defines a `Body` property that can be used to specify where the body of the layout should be rendered. The layout component for our pizza store app is defined in *Shared/MainLayout.razor*.
-
+طرح ها (Layouts) در بلیزور نیز کامپوننت هستن ، اون ها از `LayoutComponentBase` ارث میبرن ، که یک پروپرتی `Body` تعریف میکنه که مشخص میکنه بدنه طرح(layout) کجا باید رندر(rendered) بشه . لایوت کامپوننت ها برای پیتزافروشی ما داخل `*Shared/MainLayout.razor*` تعریف شدن .
 ```html
 @inherits LayoutComponentBase
 
@@ -119,12 +119,12 @@ Layouts in Blazor are also components. They inherit from `LayoutComponentBase`, 
 </div>
 ```
 
-To see how the layout is associated with your pages, look at the `<Router>` component in `App.razor`. Notice that the `DefaultLayout` parameter determines the layout used for any page that doesn't specify its own layout directly.
 
-You can also override this `DefaultLayout` on a per-page basis. To do so, you can add a directive such as `@layout SomeOtherLayout` at the top of any `.razor` page component. However, you will not need to do so in this application.
+برای اینکه ببینید چیدمان یا طرح(layout) چگونه با صفحات شما مرتبط است، به مؤلفه(component) `<Router>` در `App.razor` نگاه کنید. توجه داشته باشید که پارامتر `DefaultLayout` طرح‌بندی مورد استفاده برای هر صفحه‌ای(page) را که طرح‌بندی خود را مستقیماً مشخص نمی‌کند، تعیین می‌کند.
 
-Update the `MainLayout` component to define a top bar with a branding logo and a nav link for the home page:
+همچنین می‌توانید این `DefaultLayout` را بر اساس هر صفحه باطل کنید و نوع لایوت خود را مشخص کنید(override). برای انجام این کار، می توانید دستورالعملی مانند `layout SomeOtherLayout@` را در بالای هر مؤلفه صفحه `.razor` اضافه کنید. با این حال، در این برنامه نیازی به انجام این کار نخواهید داشت.
 
+مؤلفه `MainLayout` را به‌روزرسانی کنید تا یک نوار بالا(top bar) با یک لوگو نام تجاری و پیوند ناوبری(nav link) برای صفحه اصلی تعریف کنید:
 ```html
 @inherits LayoutComponentBase
 
@@ -149,7 +149,7 @@ Update the `MainLayout` component to define a top bar with a branding logo and a
 <NavLink></NavLink>
 ```
 کامپوننت `NavLink` مانند یک انکِرتَگ(anchor tag) است، با این تفاوت که اگر URL فعلی با آدرس پیوند مطابقت داشته باشد، یک کلاس `اکتیو` اضافه می کند. 'NavLinkMatch.All' به این معنی است که پیوند فقط زمانی باید فعال باشد که با کل URL فعلی (نه فقط یک پیشوند) مطابقت داشته باشد. در جلسه بعد مؤلفه NavLink را با جزئیات بیشتری بررسی خواهیم کرد.
-اگر از ویژوال استدویو (Visual Studio) استفاده میکنین میتوانید با `Ctrl-F5` برنامه رو اجرا کنید ، در غیر این صورت با دستور ÷÷ در کامند لاین رو اجرا کنید ، با لایوت(layout) جدیدمون ، برنامه پیتزا فروشی ما الان شبیه زیر شده :
+اگر از ویژوال استدویو (Visual Studio) استفاده میکنین میتوانید با `Ctrl-F5` برنامه رو اجرا کنید ، در غیر این صورت با دستور `dotnet run` در کامند لاین رو اجرا کنید ، با لایوت(layout) جدیدمون ، برنامه پیتزا فروشی ما الان شبیه زیر شده :
 
 ![image](https://user-images.githubusercontent.com/1874516/77239419-aa52ac80-6b97-11ea-84ae-f880db776f5c.png)
 
