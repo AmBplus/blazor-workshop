@@ -144,13 +144,14 @@ Update the `MainLayout` component to define a top bar with a branding logo and a
 </div>
 ```
 
-The `NavLink` component is provided by Blazor. Components can be used from components by specifying an element with the component's type name along with attributes for any component parameters.
-
-The `NavLink` component is the same as an anchor tag, except that it adds an `active` class if the current URL matches the link address. `NavLinkMatch.All` means that the link should be active only when it matches the entire current URL (not just a prefix). We'll examine the `NavLink` component in more detail in a later session.
-
-Run the app by hitting `Ctrl-F5`. With our new layout, our pizza store app now looks like this:
+کامپوننت `NavLink` توسط Blazor ارائه شده است. کامپوننت‌ها را می‌توان با تعیین یک عنصر با نام نوع مؤلفه(کامپوننت) به همراه ویژگی‌های(attributes) پارامتر های کامپوننت استفاده کرد. به طور مثلا کامپوننت (NavLink) به صورت زیر میتونیم استفاده کنیم 
+```csharp
+<NavLink><NavLink/>
+```
+کامپوننت `NavLink` مانند یک انکِرتَگ(anchor tag) است، با این تفاوت که اگر URL فعلی با آدرس پیوند مطابقت داشته باشد، یک کلاس `اکتیو` اضافه می کند. 'NavLinkMatch.All' به این معنی است که پیوند فقط زمانی باید فعال باشد که با کل URL فعلی (نه فقط یک پیشوند) مطابقت داشته باشد. در جلسه بعد مؤلفه NavLink را با جزئیات بیشتری بررسی خواهیم کرد.
+اگر از ویژوال استدویو (Visual Studio) استفاده میکنین میتوانید با `Ctrl-F5` برنامه رو اجرا کنید ، در غیر این صورت با دستور ÷÷ در کامند لاین رو اجرا کنید ، با لایوت(layout) جدیدمون ، برنامه پیتزا فروشی ما الان شبیه زیر شده :
 
 ![image](https://user-images.githubusercontent.com/1874516/77239419-aa52ac80-6b97-11ea-84ae-f880db776f5c.png)
 
 
-Next up - [Customize a pizza](02-customize-a-pizza.md)
+بخش بعد - [سفارشی سازی پیتزا](02-customize-a-pizza.md)
