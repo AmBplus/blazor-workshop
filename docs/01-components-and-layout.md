@@ -77,7 +77,7 @@
 
 > توجه: `BlazingPizza.OrderContext.Default.ListPizzaSpecial` به سریال سازی(serialization) Json با [مولدهای منبع(source generators)] اشاره دارد که میتونید در لینک (https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-source-generation) مشاهده بفرمایید .
  
-Once the component is initialized it will render its markup. Replace the markup in the `Index` component with the following to list the pizza specials:
+
 وقتی که کامپوننت ایجاد(initialized) میشه مارکاپ(نشانه گذاری)`markup` هارو رندر میکنه ، مارکاپ`markup` های داخل کامپوننت `Index` رو با cshtml های زیر جا به جا کنید .
 
 ```html
